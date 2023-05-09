@@ -8,8 +8,12 @@ namespace C_Sharp_Exercises._01ValidateNum
 {
     public class ValidateNum
     {
+        private readonly int _num;
+        public ValidateNum(int num) { 
+            _num = num;
+        }
 
-        public int ValideType(string a)
+        public static int ValideType(string a)
         {
             int number;
             if(int.TryParse(a, out number))
@@ -20,9 +24,9 @@ namespace C_Sharp_Exercises._01ValidateNum
             return number;
         }
 
-        public string ValideNumber(int a)
+        public string ValideNumber()
         {
-            if(a > 0 && a <= 10)
+            if(_num > 0 && _num <= 10)
             {
                 return "Valid";
             }
