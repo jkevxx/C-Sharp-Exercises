@@ -2,6 +2,7 @@
 
 using C_Sharp_Exercises._01ValidateNum;
 using C_Sharp_Exercises._02MaxNum;
+using C_Sharp_Exercises._03LandPort;
 
 namespace C_Sharp_Exercises
 {
@@ -24,24 +25,38 @@ namespace C_Sharp_Exercises
             //}
 
             /* 2° Exercise */
-            Console.WriteLine("Please write a number");
-            int num1 = MaxNum.ValideType(Console.ReadLine());
+            //Console.WriteLine("Please write a number");
+            //int num1 = MaxNum.ValideType(Console.ReadLine());
 
-            Console.WriteLine("Please write other number");
-            int num2 = MaxNum.ValideType(Console.ReadLine());
+            //Console.WriteLine("Please write other number");
+            //int num2 = MaxNum.ValideType(Console.ReadLine());
 
-            if (num1 != 0 && num2 != 0)
-            {
-                MaxNum maxNum = new MaxNum(num1, num2);
-                maxNum.ValidateMaxNum();
-            }
-            else
-            {
-                Console.WriteLine("Invalid input. Please enter a valid integer.");
-            }
+            //if (num1 != 0 && num2 != 0)
+            //{
+            //    MaxNum maxNum = new MaxNum(num1, num2);
+            //    maxNum.ValidateMaxNum();
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Invalid input. Please enter a valid integer.");
+            //}
 
             //Console.WriteLine(num1.GetType());
 
+            /* 3° Exercise */
+            Console.WriteLine("Please write the width");
+            int width = LandscapePortrait.ValideType(Console.ReadLine());
+
+            Console.WriteLine("Please write the height");
+            int height = LandscapePortrait.ValideType(Console.ReadLine());
+            if(width != 0 && height != 0)
+            {
+                LandscapePortrait landscapePortrait = new LandscapePortrait(width, height);
+                landscapePortrait.calculateLandscapePortrait();
+            }else
+            {
+                Console.WriteLine("Invalid input. Please enter a valid integer.");
+            }
         }
     }
 }

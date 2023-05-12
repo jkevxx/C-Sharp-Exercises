@@ -19,7 +19,7 @@ namespace C_Sharp_Exercises._02MaxNum
         public void ValidateMaxNum()
         {
             int max = (_num1 > _num2) ? _num1 : _num2;
-            Console.WriteLine("The max number is: " + max);
+            Console.WriteLine("The max number is: {0}", max);
 
             //if ( _num1 > _num2)
             //{
