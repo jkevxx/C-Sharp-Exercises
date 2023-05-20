@@ -3,6 +3,7 @@
 using C_Sharp_Exercises._01ValidateNum;
 using C_Sharp_Exercises._02MaxNum;
 using C_Sharp_Exercises._03LandPort;
+using C_Sharp_Exercises._04SpeedLimit;
 
 namespace C_Sharp_Exercises
 {
@@ -44,16 +45,33 @@ namespace C_Sharp_Exercises
             //Console.WriteLine(num1.GetType());
 
             /* 3° Exercise */
-            Console.WriteLine("Please write the width");
-            int width = LandscapePortrait.ValideType(Console.ReadLine());
+            //Console.WriteLine("Please write the width");
+            //int width = LandscapePortrait.ValideType(Console.ReadLine());
 
-            Console.WriteLine("Please write the height");
-            int height = LandscapePortrait.ValideType(Console.ReadLine());
-            if(width != 0 && height != 0)
+            //Console.WriteLine("Please write the height");
+            //int height = LandscapePortrait.ValideType(Console.ReadLine());
+            //if(width != 0 && height != 0)
+            //{
+            //    LandscapePortrait landscapePortrait = new LandscapePortrait(width, height);
+            //    landscapePortrait.calculateLandscapePortrait();
+            //}else
+            //{
+            //    Console.WriteLine("Invalid input. Please enter a valid integer.");
+            //}
+
+            /* 4° Exercise */
+            Console.WriteLine("Please write the speed limit");
+            int speedLimit = SpeedLimit.ValideType(Console.ReadLine());
+
+            Console.WriteLine("Please write the speed car");
+            int speedCar = SpeedLimit.ValideType(Console.ReadLine());
+
+            if (speedLimit != 0 && speedCar != 0)
             {
-                LandscapePortrait landscapePortrait = new LandscapePortrait(width, height);
-                landscapePortrait.calculateLandscapePortrait();
-            }else
+                SpeedLimit landscapePortrait = new SpeedLimit(speedLimit, speedCar);
+                landscapePortrait.calculateLimit();
+            }
+            else
             {
                 Console.WriteLine("Invalid input. Please enter a valid integer.");
             }
